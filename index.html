@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>蓮城院 百鬼夜行 vol.3 - お寺で体験する、特別な夏の夜。</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     <meta name="description" content="蓮城院がお届けする夏休みアートプロジェクト『百鬼夜行』。おばけづくりワークショップと怪談会で、ちょっぴり怖くて楽しい夏の思い出を作りませんか？">
     <link rel="icon" href="images/onibi_cursor.png">
     
     <!-- OGP tags -->
-    <meta property="og:url" content="【ここにページのURL】" />
+    <meta property="og:url" content="https://renjyoin-hyakkiyakou.netlify.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="蓮城院 百鬼夜行 vol.3 - お寺で体験する、特別な夏の夜。" />
     <meta property="og:description" content="蓮城院がお届けする夏休みアートプロジェクト『百鬼夜行』。おばけづくりワークショップと怪談会で、夏の思い出を作りませんか？" />
     <meta property="og:site_name" content="蓮城院 百鬼夜行" />
-    <meta property="og:image" content="【ここにポスター画像のURL】" />
+    <meta property="og:image" content="https://renjyoin-hyakkiyakou.netlify.app/images/poster.jpeg" />
     
     <!-- Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="蓮城院 百鬼夜行 vol.3 - お寺で体験する、特別な夏の夜。" />
     <meta name="twitter:description" content="蓮城院がお届けする夏休みアートプロジェクト『百鬼夜行』。おばけづくりワークショップと怪談会で、夏の思い出を作りませんか？" />
-    <meta name="twitter:image" content="【ここにポスター画像のURL】" />
+    <meta name="twitter:image" content="https://renjyoin-hyakkiyakou.netlify.app/images/poster.jpeg" />
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
@@ -457,6 +460,50 @@
         a, button, input, textarea, select {
             cursor: url('images/onibi_cursor.png') 16 16, pointer;
         }
+        
+        /* ===== SNSシェアボタン ===== */
+        .sns-share {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: rgba(26, 26, 26, 0.9);
+        }
+        
+        .share-title {
+            font-family: 'Kowai Mincho', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: #ffd700;
+            margin-bottom: 30px;
+            animation: text-flicker 3s ease-in-out infinite; /* 既存の揺らめきアニメーションを再利用 */
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* スマホ表示で折り返すように */
+        }
+        
+        .share-btn {
+            display: inline-flex; /* アイコンを中央に配置するために flex を使用 */
+            align-items: center;
+            justify-content: center;
+            width: 50px;  /* 円の幅 */
+            height: 50px; /* 円の高さ */
+            border-radius: 50%; /* 正円にする */
+            border: 2px solid #ff6600;
+            text-decoration: none;
+            color: #ff6600;
+            background-color: transparent;
+            transition: all 0.3s ease;
+            font-size: 1.5rem; /* アイコンのサイズ */
+        }
+        
+        .share-btn:hover {
+            background-color: #ff6600;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(255, 102, 0, 0.7);
+            transform: translateY(-3px) scale(1.1); /* 少し浮き上がって拡大する */
+        }
     </style>
 </head>
 <body>
@@ -563,6 +610,22 @@
                 <a href="mailto:koubun0218@gmail.com" class="email-link">koubun0218@gmail.com</a>
                 <p style="margin-top: 30px; font-size: 0.9rem;">※第二部『おはなし・怪談会』のみご参加の場合は、ご予約は不要です。当日、時間までにお越しください。</p>
             </div>
+        </div>
+    </section>
+    
+    <!-- SNSシェア -->
+    <section class="sns-share">
+        <h3 class="share-title">このイベントをシェアする</h3>
+        <div class="share-buttons">
+            <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://renjyoin-hyakkiyakou.netlify.app/&text=蓮城院の夏休みイベント「百鬼夜行」に参加しよう！お寺で体験する特別な夏の夜。&hashtags=蓮城院,百鬼夜行" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://renjyoin-hyakkiyakou.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Facebookでシェア">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a class="share-btn" href="https://social-plugins.line.me/lineit/share?url=https://renjyoin-hyakkiyakou.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="LINEで送る">
+                <i class="fa-brands fa-line"></i>
+            </a>
         </div>
     </section>
     
