@@ -302,6 +302,45 @@
             min-width: 60px;
         }
         
+        /* 限定御朱印セクション */
+        .special-goshuin {
+            background-color: rgba(51, 0, 0, 0.9);
+            position: relative;
+        }
+        
+        .goshuin-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .goshuin-main {
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-family: 'Kowai Mincho', serif;
+        }
+        
+        .goshuin-info {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 100%);
+            border: 2px solid #ff6600;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            animation: flicker 5s ease-in-out infinite;
+        }
+        
+        .goshuin-info p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .goshuin-note {
+            color: #ff6600;
+            font-size: 0.95rem !important;
+            margin-top: 20px !important;
+        }
+        
         /* アクセス */
         .access {
             background-color: rgba(26, 26, 26, 0.9);
@@ -562,6 +601,26 @@
         </div>
     </section>
     
+    <!-- 限定御朱印 -->
+    <section class="special-goshuin">
+        <div class="container">
+            <h2 class="section-title">イベント限定御朱印</h2>
+            <div class="goshuin-content">
+                <div class="goshuin-text">
+                    <p class="goshuin-main">百鬼夜行の夜だけの特別な御朱印をご用意しております。</p>
+                    <p>お化けや妖怪をモチーフにした、この日限りの特別なデザインです。参加の記念として、また夏の思い出として、ぜひお受けください。</p>
+                    <div class="goshuin-info">
+                        <p><strong>授与時間：</strong>16:30 〜 21:00</p>
+                        <p><strong>初穂料：</strong>500円</p>
+                        <p><strong>授与場所：</strong>本堂受付</p>
+                        <p class="goshuin-note">※数量限定のため、なくなり次第終了となります。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flame" style="top: 10%; right: 5%; animation-delay: 0.5s;"></div>
+    </section>
+    
     <!-- タイムライン -->
     <section class="timeline">
         <div class="container">
@@ -657,7 +716,7 @@
         
         // アニメーション対象要素の監視
         document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('.section-title, .intro-text, .program-card, .timeline-item, .contact-content');
+            const animatedElements = document.querySelectorAll('.section-title, .intro-text, .program-card, .timeline-item, .contact-content, .goshuin-content');
             animatedElements.forEach(el => {
                 el.style.opacity = '0';
                 observer.observe(el);
