@@ -306,12 +306,30 @@
         .special-goshuin {
             background-color: rgba(51, 0, 0, 0.9);
             position: relative;
+            background-image: url('images/Kkk.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1800px;
+            background-blend-mode: overlay;
+        }
+        
+        .special-goshuin::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(51, 0, 0, 0.4) 0%, rgba(51, 0, 0, 0.85) 70%);
+            pointer-events: none;
         }
         
         .goshuin-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
         
         .goshuin-main {
@@ -608,10 +626,10 @@
             <div class="goshuin-content">
                 <div class="goshuin-text">
                     <p class="goshuin-main">百鬼夜行の夜だけの特別な御朱印をご用意しております。</p>
-                    <p>お化けや妖怪をモチーフにした、この日限りの特別なデザインです。参加の記念として、また夏の思い出として、ぜひお受けください。</p>
+                    <p>火車猫をモチーフとした、この日限りの特別なデザインです。参加の記念として、また夏の思い出として、ぜひお受けください。</p>
                     <div class="goshuin-info">
                         <p><strong>授与時間：</strong>16:30 〜 21:00</p>
-                        <p><strong>初穂料：</strong>500円</p>
+                        <p><strong>志納料：</strong>500円</p>
                         <p><strong>授与場所：</strong>本堂受付</p>
                         <p class="goshuin-note">※数量限定のため、なくなり次第終了となります。</p>
                     </div>
